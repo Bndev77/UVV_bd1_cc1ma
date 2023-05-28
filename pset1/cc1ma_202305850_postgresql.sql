@@ -261,7 +261,7 @@ CREATE TABLE pedido_itens (
   CONSTRAINT pedido_itens_pk          PRIMARY KEY (pedido_id, produto_id),
   CONSTRAINT pedidos_pedido_itens_fk  FOREIGN KEY (pedido_id)   REFERENCES pedidos (pedido_id)   ON DELETE NO ACTION ON UPDATE NO ACTION NOT DEFERRABLE,
   CONSTRAINT produtos_pedido_itens_fk FOREIGN KEY (produto_id)  REFERENCES produtos (produto_id) ON DELETE NO ACTION ON UPDATE NO ACTION NOT DEFERRABLE,
-  CONSTRAINT envios_pedido_itens_fk   FOREIGN KEY (envio_id)     REFERENCES envios (envio_id)    ON DELETE NO ACTION ON UPDATE NO ACTION NOT DEFERRABLE
+  CONSTRAINT envios_pedido_itens_fk   FOREIGN KEY (envio_id)    REFERENCES envios (envio_id)     ON DELETE NO ACTION ON UPDATE NO ACTION NOT DEFERRABLE
 );
 
 COMMENT ON TABLE pedido_itens                  IS 'Informações sobre os itens pedidos em uma loja.';
