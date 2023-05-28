@@ -128,7 +128,7 @@ COMMENT ON COLUMN lojas.endereco_fisico IS 'endereço fisico da loja';
 -- Neste caso, estamos criando a tabela "estoques" com várias colunas e restrições
 CREATE TABLE estoques (
   estoque_id NUMERIC(38) NOT NULL,
-  loja_id NUMERIC(38) NOT NULL,
+  loja_id    NUMERIC(38) NOT NULL,
   produto_id NUMERIC(38) NOT NULL,
   quantidade NUMERIC(38) NOT NULL,
   CONSTRAINT estoque_id PRIMARY KEY (estoque_id)
